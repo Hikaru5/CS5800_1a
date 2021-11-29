@@ -1,9 +1,8 @@
+package problem1a;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import model.entities.Customers;
-import model.entities.Professors;
 
 public class MainDelete 
 {
@@ -32,7 +31,7 @@ public static void main(String[] args) {
 			
 			session.delete(professor);
 			
-			session.createQuery("delete from Professors where id="+professor.getID()).executeUpdate();
+			session.createQuery("delete from professors where id="+professor.getID()).executeUpdate();
 			
 		}catch (Exception e) {
             System.out.println(e.getMessage());
